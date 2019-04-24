@@ -1,4 +1,4 @@
-DEV_ROCKS = "lua-cjson 2.1.0" "kong 0.13.0" "luacov 0.12.0" "busted 2.0.rc12" "luacov-cobertura 0.2-1" "luacheck 0.20.0"
+DEV_ROCKS = "lua-cjson 2.1.0" "kong 1.1.1" "luacov 0.12.0" "busted 2.0.rc12" "luacov-cobertura 0.2-1" "luacheck 0.20.0"
 PROJECT_FOLDER = url-rewrite
 LUA_PROJECT = kong-plugin-url-rewrite
 
@@ -9,7 +9,7 @@ setup:
 			echo $$rock already installed, skipping ; \
 		else \
 			echo $$rock not found, installing via luarocks... ; \
-			luarocks install $$rock; \
+			luarocks install --deps-mode=all $$rock; \
 		fi \
 	done;
 
