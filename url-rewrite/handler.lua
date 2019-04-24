@@ -29,7 +29,7 @@ function URLRewriter:access(config)
   requestParams = getRequestUrlParams(config.url)
   --ngx.ctx.upstream_url = replaceHost(ngx.ctx.upstream_url, newHost)
   ngx.var.upstream_uri = resolveUrlParams(requestParams, config.url)
-  ngx.ctx.upstream_url = "test"
+  ngx.print("-------- TESTING -------------")
 end
 
 return URLRewriter
